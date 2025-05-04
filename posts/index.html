@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>文章列表 | 中華自由陣線</title>
-    <style>
-        body { font-family: Arial, sans-serif; padding: 20px; background: #f8f8f8; }
-        h1 { color: #333; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        a { text-decoration: none; color: #0066cc; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中華自由陣線</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>文章列表</h1>
-    <ul>
-        <li><a href="post1.html">第一篇文章（post1）</a></li>
-        <!-- 你可以依照這格式繼續新增文章 -->
-        <!-- <li><a href="post2.html">第二篇文章標題</a></li> -->
-    </ul>
+  <header>
+    <img src="logo.png" class="logo" alt="Logo" />
+    <nav>
+      <a href="index.html">首頁 / Home</a>
+      <a href="about.html">關於我們 / About</a>
+      <a href="reports.html">人權報告 / Reports</a>
+      <a href="contact.html">聯絡我們 / Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>最新文章</h1>
+    <ul id="post-list"></ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 中華自由陣線</p>
+  </footer>
+
+  <script>
+    const postList = document.getElementById("post-list");
+
+    const posts = [
+      {
+        title: "文章標題 1",
+        filename: "post1.html",
+        date: "2025-05-03"
+      }
+      // 以後可以在這裡繼續新增文章
+    ];
+
+    posts.forEach(post => {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${post.filename}">${post.title}</a> - <em>${post.date}</em>`;
+      postList.appendChild(li);
+    });
+  </script>
 </body>
 </html>
