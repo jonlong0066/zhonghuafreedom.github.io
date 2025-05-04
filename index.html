@@ -32,13 +32,17 @@
     <script>
         const postList = document.getElementById("post-list");
         const posts = [
-            {
-                title: "文章標題",
-                url: "posts/post1.html",
-                date: "2025-05-03"
-            }
-            // 你可以在這裡繼續新增文章
-        ];
+    {
+        title: "文章標題",
+        url: "posts/post1.html",
+        date: "2025-05-03"
+    },
+    {
+        title: "第二篇文章",
+        url: "posts/post2.html"
+        date: "2025-05-04"
+    }
+];// 你可以在這裡繼續新增文章
 
         posts.forEach(post => {
             const li = document.createElement("li");
