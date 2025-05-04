@@ -30,17 +30,17 @@
     const postList = document.getElementById("post-list");
 
     const posts = [
-      {
-        title: "文章標題 1",
-        filename: "post1.html",
-        date: "2025-05-03"
-      }
+  {
+    title: "文章標題",
+    url: "post1.html",
+    date: "2025-05-03"
+  }
       // 以後可以在這裡繼續新增文章
     ];
 
     posts.forEach(post => {
       const li = document.createElement("li");
-      li.innerHTML = `<a href="${post.filename}">${post.title}</a> - <em>${post.date}</em>`;
+      li.innerHTML = `<a href="${post.url}">${post.title} - <small>${post.date}</small></a>`;
       postList.appendChild(li);
     });
   </script>
